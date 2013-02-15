@@ -1,0 +1,11 @@
+!.gitignore
+.composer
+bin
+composer
+doctrine
+phptal
+room13
+stubbles
+symfony
+zendframework
+autoload.php

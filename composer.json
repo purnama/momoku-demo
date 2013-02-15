@@ -1,0 +1,25 @@
+{
+    "name":"momoku/momoku",
+    "description":"PHP Framework Stack consist of Zend Framework 2, Doctrine 2, Stubbles 2 and PHPTal",
+    "license":"LGPL v3",
+    "keywords":[
+        "PHP",
+        "Zend Framework",
+        "Stubbles",
+        "Doctrine",
+        "PHPTal"
+    ],
+    "homepage":"http://github.com/purnama/momoku",
+    "require":{
+        "php":">=5.4",
+        "zendframework/zendframework":"2.*",
+        "doctrine/orm":"2.*",
+        "stubbles/core":"2.*",
+        "phptal/phptal":"dev-master"
+
+    },
+    "scripts":{
+        "post-install-cmd":"org\\stubbles\\scripts\\ComposerScripts::postInstall",
+        "post-update-cmd":"org\\stubbles\\scripts\\ComposerScripts::postUpdate"
+    }
+}
