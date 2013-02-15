@@ -22,12 +22,12 @@
  * @link    http://github.com/purnama/momoku
  * @copyright Copyright (c) 2013 Momoku (http://github.com/purnama/momoku)
  */
-namespace Kateglo\Mvc\Controller;
+namespace Momoku\Mvc\Controller;
 
 use net\stubbles\ioc\Binder;
 use net\stubbles\ioc\binding\BindingScopes;
-use Kateglo\Ioc\Binding\BindingIndex;
-use Kateglo\Ioc\Binding\SessionBindingScope;
+use Momoku\Ioc\Binding\BindingIndex;
+use Momoku\Ioc\Binding\SessionBindingScope;
 use Zend\Mvc\Exception\InvalidControllerException;
 
 /**

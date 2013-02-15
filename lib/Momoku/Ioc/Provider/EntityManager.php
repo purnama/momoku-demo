@@ -22,7 +22,7 @@
  * @link    http://github.com/purnama/momoku
  * @copyright Copyright (c) 2013 Momoku (http://github.com/purnama/momoku)
  */
-namespace Kateglo\Ioc\Provider;
+namespace Momoku\Ioc\Provider;
 
 use net\stubbles\ioc\InjectionProvider;
 use net\stubbles\lang\BaseObject;

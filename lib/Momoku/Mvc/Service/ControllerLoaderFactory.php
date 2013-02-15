@@ -22,9 +22,9 @@
  * @link    http://github.com/purnama/momoku
  * @copyright Copyright (c) 2013 Momoku (http://github.com/purnama/momoku)
  */
-namespace Kateglo\Mvc\Service;
+namespace Momoku\Mvc\Service;
 
-use Kateglo\Mvc\Controller\ControllerManager;
+use Momoku\Mvc\Controller\ControllerManager;
 use Zend\Mvc\Service\DiStrictAbstractServiceFactory;
 use Zend\ServiceManager\ServiceLocatorInterface;
 
