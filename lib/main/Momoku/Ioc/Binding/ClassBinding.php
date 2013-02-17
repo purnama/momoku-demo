@@ -26,6 +26,7 @@ namespace Momoku\Ioc\Binding;
 
 use net\stubbles\ioc\binding\BindingException;
 use net\stubbles\ioc\DefaultInjectionProvider;
+use net\stubbles\ioc\InjectionProvider;
 use net\stubbles\ioc\Injector;
 use net\stubbles\lang\reflect\ReflectionClass;
 /**
@@ -58,7 +59,7 @@ class ClassBinding extends \net\stubbles\ioc\binding\ClassBinding
         $impl = $reflection->getProperty('impl');
         $impl->setAccessible(true);
         if (is_string($impl->getValue($this))) {
-            $impl->setValue($this, ReflectionClass($impl));
+            $impl->setValue($this, new ReflectionClass($impl));
         }
 
         /** @var $scope \ReflectionProperty */

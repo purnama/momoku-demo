@@ -54,7 +54,7 @@ class ControllerManager extends \Zend\Mvc\Controller\ControllerManager
         ) {
             $binder = new Binder(new BindingIndex(new BindingScopes(null, new SessionBindingScope())));
             $configuration = $this->serviceLocator->get("ApplicationConfig");
-            $binder->bindConstant('ApplicationConfig')->to($configuration);
+            $binder->bindConstant('ApplicationConfiguration')->to($configuration);
             foreach($configuration['providers'] as $impl => $providerClass){
                 $binder->bind($impl)->toProviderClass($providerClass);
             }

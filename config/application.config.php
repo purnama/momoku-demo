@@ -9,7 +9,7 @@ return array(
     //Doctrine Configuration
     'doctrine' => array(
         'metadata' => array(
-           dirname(__DIR__).'/lib/Momoku/Entity',
+           dirname(__DIR__).'/lib/main/Demo/Entity',
         ),
         'database' => array(
             //'pdo_mysql' 'pdo_sqlite' 'pdo_pgsql'  'pdo_oci' 'oci8' 'ibm_db2'
@@ -26,6 +26,7 @@ return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
         'Application',
+        'Album',
     ),
 
     // These are various options for the listeners attached to the ModuleManager

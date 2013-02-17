@@ -22,44 +22,82 @@
  * @link    http://github.com/purnama/momoku
  * @copyright Copyright (c) 2013 Momoku (http://github.com/purnama/momoku)
  */
-namespace Momoku\Ioc\Provider;
+namespace Demo\Entity;
 
-use net\stubbles\ioc\InjectionProvider;
-use net\stubbles\lang\BaseObject;
 /**
- * Provider to create Entity Manager Instance
  *
  * @author  Arthur Purnama <arthur@purnama.de>
+ *
+ * @Entity
+ * @Table(name="album")
  */
-class EntityManager extends BaseObject implements InjectionProvider
+class Album
 {
     /**
-     * @var array
+     * @Id
+     * @GeneratedValue
+     * @Column(type="integer")
+     * @var int id of the album
      */
-    private $configuration;
+    protected $id;
 
     /**
-     * Constructor
-     *
-     * @Inject
-     * @Named('ApplicationConfiguration')
-     * @param $configuration Application Configuration
+     * @Version
+     * @Column(type="integer")
+     * @var int version
      */
-    public function __construct($configuration){
-        $this->configuration = $configuration['database'];
-    }
+    protected $version;
 
     /**
-     * returns the value to provide
-     *
-     * @param   string  $name
-     * @return  \Doctrine\ORM\EntityManager
+     * @Column(type="string")
+     * @var string name of the artist or band
      */
-    public function get($name = null)
+    protected $artist;
+
+    /**
+     * @Column(type="string")
+     * @var string title of the album
+     */
+    protected $title;
+
+    /**
+     * @param string $artist
+     */
+    public function setArtist($artist)
     {
-        return \Doctrine\ORM\EntityManager::create(
-            $this->configuration['database'],
-            \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration($this->configuration['metadata'],
-                $_SERVER['APPLICATION_ENV'] === 'development'));
+        $this->artist = $artist;
     }
+
+    /**
+     * @return string
+     */
+    public function getArtist()
+    {
+        return $this->artist;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param string $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
 }
